@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="282.0" prefWidth="487.0" spacing="20" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bmi.BMICalculatorController">
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem text="Exit" />
+            <MenuItem onAction="#clearFields" text="Clear" />
+        </Menu>
+        <Menu text="Help">
+            <MenuItem onAction="#showAbout" text="About" />
+        </Menu>
+    </MenuBar>
+    <Label style="-fx-font-size: 20px;" text="BMI Calculator" />
+    <GridPane alignment="CENTER">
+        <Label text="Weight (kg/lbs):" />
+        <TextField fx:id="weightField" />
+        <Label text="Height (cm/inch):" GridPane.rowIndex="1" />
+        <TextField fx:id="heightField" GridPane.rowIndex="1" />
+      <columnConstraints>
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <Button onAction="#calculateBMI" text="Calculate BMI" />
+    <Button onAction="#clearFields" text="Clear" />
+    <Label fx:id="resultLabel" />
+</VBox>
